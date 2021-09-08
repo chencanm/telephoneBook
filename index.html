@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易电话本</title>
+    <style>
+        .container{
+            width: 1000px;
+            min-height:200px;
+            border: solid 1px red;
+            margin: 10px auto;
+        }
+        .main{
+            text-align: center;
+            margin-top: 10px;
+        }
+        table{
+            width: 90%;
+            min-height:50px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table td,table th{
+            border: 1px solid red;
+            color: #666;
+            height: 50px;
+        }
+        table thead th{
+            background-color: #cce8eb;
+        }
+        table tr:nth-child(odd):hover{
+            background-color: #fff;
+        }
+        table tr:nth-child(even):hover{
+            background-color: #16afaf;
+        }
+
+        th#num{
+            width: 10%;
+        }
+        th#names{
+            width: 15%;
+        }
+        th#tel{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <label>姓名：<input type="text" id="name"></label>
+            <label>电话号码：<input type="text" id="number" minlength="11"></label>
+            <button id="btn">保存</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr><th id="num">编号</th><th id="names">姓名</th><th id="tel">电话</th><th>操作</th></tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr><td>1</td><td>2</td><td>3</td><td><button>1</button><button>2</button></td></tr> -->
+            </tbody>
+            
+        </table>
+    </div>
+    <script src="most.js"></script>
+</body>
+</html>
